@@ -14,3 +14,6 @@ test_that("null y input", {
   expect_equal(is.na(my_add(10, NA)), TRUE)
 })
 
+test_that("missing x input", {
+  expect_error(my_add(y=20), paste("argument", dQuote("x"), "is missing, with no default"))
+})
